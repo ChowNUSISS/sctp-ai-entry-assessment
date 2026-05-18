@@ -12,11 +12,11 @@ inventory = []
 # inventory list. If the item already exists, print a message instead of adding it.
 # Example message: "Mouse is already in inventory."
 
-def addItem(itemName):
-    if itemName in inventory:
-        print(f"{itemName} is already in inventory.")
+def addItem(itemName): 					# define a function with one parameter
+    if itemName in inventory:				# check if an item is already inside the list called "inventory"
+        print(f"{itemName} is already in inventory.")	# if yes print msg
     else:
-        inventory.append(itemName)
+        inventory.append(itemName)			# if no, add item into the list called "inventory"
     pass
 
 # Task 3:
@@ -24,19 +24,19 @@ def addItem(itemName):
 # If the inventory is empty, print: "Inventory is empty."
 
 def listInventory():
-    if len(inventory) == 0:
-        print("Inventory is empty.")
+    if len(inventory) == 0:				# check if the length is zero, if zero means empty
+        print("Inventory is empty.")			# if empty print "empty" msg
     else:
-        print(f"Inventory: {inventory}")
+        print(f"Inventory: {inventory}")		# if not empty, print out all items
     pass
 
 # Task 4:
 # Call the functions in this order and observe the output:
-addItem("Laptop")
-addItem("Mouse")
-addItem("Keyboard")
-addItem("Mouse")   # Should trigger duplicate warning
-listInventory()
+addItem("Laptop")					# add "Laptop"
+addItem("Mouse")					# add "Mouse"
+addItem("Keyboard")					# add "Keyboard"
+addItem("Mouse")   					# Should trigger duplicate warning
+listInventory()						# print out all items
 
 # Expected output:
 # Mouse is already in inventory.

@@ -16,15 +16,16 @@
  #   # Add your code here
   #  pass
 
-def convertTemp(value, unit):
-    if unit == "C":
-        result = (value * 9/5) + 32
-        return round(result, 2)
-    elif unit == "F":
-        result = (value - 32) * 5/9
-        return round(result, 2)
+def convertTemp(value, unit):			# define a function with 2 parameters requirement
+    if unit == "C": 				# check if equivalent the charactor "C"
+        result = (value * 9/5) + 32 		# if True, convert c to f
+        return round(result, 2) 		# return the results in 2 decimal piece
+    elif unit == "F": 				# check if equivalent the charactor "F"
+        result = (value - 32) * 5/9		# # if True, convert f to c
+        return round(result, 2)			# return the results in 2 decimal piece
     else:
-        return -1
+        return -1				# return -1 if all fails
+
     pass
 # Task 2:
 # Call the function with the following inputs and print each result:
@@ -34,7 +35,7 @@ def convertTemp(value, unit):
 #   convertTemp("invalid","X")→ Expected: -1
 
 # Add your code here
-print(convertTemp(100, "C"))      
+print(convertTemp(100, "C"))      # Testing the code, call the function, pass two parameters to it.
 print(convertTemp(32, "F"))     
 print(convertTemp(37, "C")) 
 print(convertTemp("invalid","X"))
